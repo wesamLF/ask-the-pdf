@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-light: #F9FAFB;
+  --color-primary-text: #111827;
+  --color-secondary-text: #334155;
+  --color-primary: #0D9488;
+  --color-accent: #99F6E4;
+  --color-light-gray: rgba(51, 65, 85, 0.1);
+  --color-dark-gray: rgba(51, 65, 85, 0.45);
+  --color-highlight: #FEF08A;
+  --color-success: rgba(22, 163, 74, 0.25)
+;
+  --color-wrong: rgba(220, 38, 38, 0.25)
+;
+
+
+  --text-title: 24px;
+  --text-support: 20px;
+  /* in tailwind text-base == 16px */
+  --text-helper: 14px;
+
+}
+
+.max-w-main {
+    @apply max-w-406.25 mx-auto px-4 md:px-8 lg:px-20 2xl:px-0;
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.react-pdf__Page__textContent mark {
+  background-color: #fde047; /* Tailwind yellow-300 */
+  color:black;   
+       /* Keep actual PDF text visible */
+  border-radius: 2px;
+}
+@layer utilities {
+  .wavy-line {
+    --s: 44px;
+    --b: 16px;
+    --m: 0.4;
+
+    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    height: calc(2 * var(--R));
+    width: 100%;
+
+    --_g: #0000 calc(99% - var(--b)),
+          #000 calc(101% - var(--b)) 99%,
+          #0000 101%;
+
+    mask:
+      radial-gradient(
+        var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)),
+        var(--_g)
+      )
+      calc(50% - 2*var(--s))
+      calc(50% - var(--s)/2 - var(--b)/2)
+      / calc(4*var(--s)) calc(var(--s) + var(--b))
+      repeat-x,
+
+      radial-gradient(
+        var(--R) at left 50% top calc(-1*var(--m)*var(--s)),
+        var(--_g)
+      )
+      50%
+      calc(50% + var(--s)/2 + var(--b)/2)
+      / calc(4*var(--s)) calc(var(--s) + var(--b))
+      repeat-x;
+
+    /* ✨ blur + fade */
+    filter: blur(6px);
+    opacity: 0.45;
+
+    /* ✨ soft vertical fade */
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+
+  /* Optional: stronger dreamy version */
+  .wavy-line-soft {
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+}
+
