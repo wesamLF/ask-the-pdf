@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "AskThePDF",
   description: "Start Quiz",
+   icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
