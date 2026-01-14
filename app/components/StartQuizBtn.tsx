@@ -53,7 +53,7 @@ const StartQuizBtn = ({ uploading, setUploading }: { uploading: boolean, setUplo
             <button
                 onClick={handleUpload}
                 disabled={uploading}
-                className="mt-2  flex  justify-center items-center gap-2 rounded bg-primary px-4 py-2 text-white hover:bg-primary/80 disabled:opacity-50"
+                className="mt-2  flex  justify-center items-center gap-2 rounded bg-primary px-4 py-2 text-white hover:bg-primary/80 disabled:opacity-50 "
             > Start Quiz
                 {uploading && (
                     <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />

@@ -17,7 +17,7 @@ const Footer = () => {
 
                 <div className="flex items-center gap-5">
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/wesamLF/ask-the-pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-secondary-text hover:text-primary transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
                     </a>
 
                     <a
-                        href="https://twitter.com/yourusername"
+                        href="https://x.com/LafiWesam7616"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-secondary-text hover:text-primary transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/wesam-lafi-0623521b7/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-secondary-text hover:text-primary transition-colors"

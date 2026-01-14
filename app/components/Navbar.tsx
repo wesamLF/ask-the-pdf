@@ -8,7 +8,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className=" z-50 border-b  border-light-gray text-base max-w-main ">
+        <header className=" z-50 border-b  border-light-gray text-base max-wd-main ">
             <div className="mx-auto flex items-center justify-between ">
                 <div className=" flex gap-8 justify-center items-center h-full">
                     <Link href="/" className="w-30 font-semibold text-primary hover:text-secondary-text  p-2">

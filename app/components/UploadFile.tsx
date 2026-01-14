@@ -24,7 +24,25 @@ const UploadFile = ({ uploading }: { uploading: boolean }) => {
     if (droppedFile) handleFile(droppedFile);
   }
 
+  async function useSamplePdf() {
+    if (uploading) return;
 
+    try {
+      const res = await fetch("/wesam_lafi_cv.pdf");
+      if (!res.ok) throw new Error("Failed to load sample PDF");
+
+      const blob = await res.blob();
+
+      const file = new File([blob], "wesam_lafi_cv.pdf", {
+        type: "application/pdf",
+      });
+
+      handleFile(file);
+    } catch (err) {
+      console.error(err);
+      alert("Could not load sample PDF");
+    }
+  }
   return (
     <div className="h-full relative ">
       {uploading &&
@@ -76,7 +94,14 @@ const UploadFile = ({ uploading }: { uploading: boolean }) => {
           </p>
         )}
       </div>
-
+      <button
+        type="button"
+        disabled={uploading}
+        onClick={useSamplePdf}
+        className="mt-3 rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10 disabled:opacity-50"
+      >
+        Try with sample PDF
+      </button>
       {file && (
         <div className="mt-4 rounded-lg bg-accent p-3 text-sm text-slate-700 ">
           <div className="flex items-center justify-between">
