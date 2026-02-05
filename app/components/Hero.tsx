@@ -18,7 +18,7 @@ const Hero = () => {
                     <p className="text-secondary-text text-lg md:text-xl mb-8">
                         Upload your PDF and let our AI generate practice questions instantly. Perfect for students, teachers, and lifelong learners.
                     </p>
-                    <Link href={"/quiz/upload"} className=" flex justify-center  ">
+                    <Link href={"/quiz/upload"} prefetch={false} className=" flex justify-center  ">
                         <p className="bg-primary text-light px-6 py-3 rounded-lg text-lg font-semibold hover:bg-primary/90 transition">                        Upload PDF & Generate Questions
                         </p>
                     </Link >

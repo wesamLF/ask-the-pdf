@@ -60,7 +60,7 @@ const Demo = () => {
 
                     <div className="relative h-90 md:h-130 cursor-pointer">
                         {images.map((img, index) => (
-                            <Link href={'/quiz/upload'} key={index} 
+                            <Link href={'/quiz/upload'} prefetch={false} key={index} 
                             >
                                 <img
                                     src={img}

@@ -11,13 +11,13 @@ export default function Navbar() {
         <header className=" z-50 border-b  border-light-gray text-base max-wd-main ">
             <div className="mx-auto flex items-center justify-between ">
                 <div className=" flex gap-8 justify-center items-center h-full">
-                    <Link href="/" className="w-30 font-semibold text-primary hover:text-secondary-text  p-2">
+                    <Link prefetch={false} href="/" className="w-30 font-semibold text-primary hover:text-secondary-text  p-2">
                         <img src="/images/atp.png" alt=""  />
                     </Link>
                     <Link href="/#about" className="hidden sm:flex h-full  justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text ">
                         About
                     </Link>
-                    <Link href="/contact" className="hidden sm:flex h-full  justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text  ">
+                    <Link prefetch={false} href="/contact" className="hidden sm:flex h-full  justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text  ">
                         Contact
                     </Link>
                 </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
             {open && (
                 <div className="border-t border-light-gray  md:hidden">
                     <nav className="flex flex-col gap-2 px-4 py-4">
-                        <Link
+                        <Link prefetch={false}
                             href="/#how-it-works"
                             onClick={() => setOpen(false)}
                             className=" px-3 py-2  h-full flex justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text "
@@ -76,7 +76,7 @@ export default function Navbar() {
                         <Link href="/#about" className=" h-full flex justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text ">
                             About
                         </Link>
-                        <Link href="/contact" className=" h-full flex justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text  ">
+                        <Link prefetch={false} href="/contact" className=" h-full flex justify-center items-center border-b pt-px border-transparent hover:text-secondary-text  hover:border-primary-text  ">
                             Contact
                         </Link>
                         <Link
